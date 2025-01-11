@@ -25,10 +25,6 @@ const ScrollableCards = () => {
       const scrollDelta = scrollY - lastScrollY.current;
       const viewportHeight = window.innerHeight;
       
-      // Calculate section position relative to viewport
-      const sectionTop = rect.top + scrollY;
-      const scrollInSection = scrollY - sectionTop;
-      
       // Only animate cards when section is in view
       if (rect.top > viewportHeight || rect.bottom < 0) {
         lastScrollY.current = scrollY;
