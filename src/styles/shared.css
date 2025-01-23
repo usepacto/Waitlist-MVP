@@ -1,0 +1,10 @@
+/* Colors */
+:root {
+  --background-light: #fafcfe;
+  --text-dark: #303030;
+}
+
+/* Typography */
+.text-heading-large {
+  @apply text-[34.34px] font-semibold font-['Geist'] leading-[41.21px];
+} 
