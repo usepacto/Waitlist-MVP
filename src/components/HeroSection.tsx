@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 
-export default function HeroSection(): JSX.Element {
+export default function HeroSection(): React.ReactElement {
   return (
     <section className="w-full bg-gradient-to-b from-[#ffffff] via-[#f0f0ff] to-[#ffffff] overflow-hidden">
       {/* Outer wrapper: ensures min height, bottom padding, center alignment */}
