@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pacto - Smart Money Management",
+  title: "Pacto",
   description: "Simplify your money management with Pacto",
 };
 

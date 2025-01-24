@@ -1,8 +1,13 @@
 'use client';
 
 import React from 'react';
+import { SURVEY_URL } from './Context';
 
 const FinalCTA: React.FC = () => {
+  const handleSurveyClick = () => {
+    window.open(SURVEY_URL, '_blank');
+  };
+
   return (
     <section className="w-full min-h-[439px] py-16 md:py-[120px] bg-[#fafcfe] flex justify-center items-center">
       <div className="w-full max-w-[800px] px-6 md:px-[25px] flex flex-col justify-center items-center gap-8 md:gap-[50px]">
@@ -14,7 +19,10 @@ const FinalCTA: React.FC = () => {
             Take control with a budgeting partner that does the legwork for you...
           </p>
         </div>
-        <button className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors">
+        <button 
+          onClick={handleSurveyClick}
+          className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors"
+        >
           <span className="text-[#fcfcfc] text-base font-medium font-['Geist'] leading-normal">
             Join the Waitlist
           </span>

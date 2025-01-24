@@ -3,8 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { SURVEY_URL } from './Context';
 
 const Footer: React.FC = () => {
+  const handleSurveyClick = () => {
+    window.open(SURVEY_URL, '_blank');
+  };
+
   return (
     <footer className="w-full min-h-[359px] px-20 py-12 bg-[#fafcfe]">
       <div className="w-full h-[263px] flex flex-col justify-start items-start gap-12">
@@ -19,7 +24,10 @@ const Footer: React.FC = () => {
                 Join our waitlist and be one of the first to try out Pacto
               </p>
             </div>
-            <button className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors">
+            <button 
+              onClick={handleSurveyClick}
+              className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors"
+            >
               <span className="text-[#fcfcfc] text-base font-medium font-['Geist'] leading-normal">
                 Join the Waitlist
               </span>
