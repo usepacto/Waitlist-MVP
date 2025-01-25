@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-export const SURVEY_URL = "https://tally.so/r/mOPMRd";
+export const SURVEY_URL = "/survey";
 
 const Context: React.FC = () => {
   return (

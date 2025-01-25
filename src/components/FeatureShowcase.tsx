@@ -29,30 +29,28 @@ const features: Feature[] = [
 
 const FeatureShowcase: React.FC = () => {
   return (
-    <section className="w-full py-24 bg-gradient-to-b from-[#ffffff] via-white to-[#fafcfe] flex justify-center items-center">
-      <div className="max-w-[1440px] w-full px-6 md:px-10 flex flex-col lg:flex-row justify-between items-start gap-20">
-        {/* Left Column */}
-        <div className="w-full lg:w-[640px] flex flex-col justify-start items-center lg:items-start text-center lg:text-left">
-          <h2 className="text-[#303030] text-4xl font-bold font-['Geist'] leading-[43.20px] mb-4">
+    <section className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#ffffff] via-white to-[#fafcfe]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 md:px-20">
+        {/* Header Section */}
+        <div className="w-full max-w-[800px] mx-auto flex flex-col justify-start items-center text-center mb-8 md:mb-12">
+          <h2 className="text-[#303030] text-2xl sm:text-3xl md:text-4xl font-bold font-['Geist'] leading-tight mb-3 md:mb-4">
             Pacto is built to give you control over your money
           </h2>
-          <div className="flex flex-col gap-1">
-            <p className="text-[#616161] text-xl font-normal font-['Geist'] leading-normal">
-              Managing money should be effortlessly easy easy, all you should need to do is think about what you want and plan for it.
-            </p>
-            
-          </div>
+          <p className="text-[#616161] text-base sm:text-lg md:text-xl font-normal font-['Geist'] leading-normal max-w-[90%] mx-auto">
+            Managing money should be effortlessly easy, all you should need to do is think about what you want and plan for it.
+          </p>
         </div>
 
-        {/* Right Column - Feature Cards */}
-        <div className="flex-1 flex flex-col justify-center items-start gap-10">
+        {/* Feature Cards - Stack on Mobile and Tablet */}
+        <div className="w-full max-w-[800px] mx-auto flex flex-col justify-center items-center gap-6 md:gap-8">
           {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              title={feature.title}
-              description={feature.description}
-              icon={feature.icon}
-            />
+            <div key={index} className="w-full">
+              <FeatureCard
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { SURVEY_URL } from './Context';
+import { useRouter } from 'next/navigation';
 
 const FinalCTA: React.FC = () => {
+  const router = useRouter();
+  
   const handleSurveyClick = () => {
-    window.open(SURVEY_URL, '_blank');
+    router.push(SURVEY_URL);
   };
 
   return (
