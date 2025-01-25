@@ -2,8 +2,15 @@
 
 import * as React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function HeroSection(): React.ReactElement {
+  const router = useRouter();
+  
+  const handleSurveyClick = () => {
+    router.push('/survey');
+  };
+
   return (
     <section className="w-full bg-gradient-to-b from-white via-[#f8f8ff] to-white overflow-hidden">
       {/* Main container with natural height and centered content */}
@@ -38,10 +45,11 @@ export default function HeroSection(): React.ReactElement {
             </div>
 
             {/* Button with refined mobile spacing */}
-            <button className="mt-3 md:mt-0 px-6 py-3 md:px-7 md:py-4 bg-[#7773e1] rounded-xl md:rounded-2xl inline-flex justify-center items-center hover:bg-opacity-90 transition-all">
-              <span className="text-[#fcfcfc] text-base md:text-xl font-medium font-sans leading-normal">
-                Join the waitlist
-              </span>
+            <button 
+              onClick={handleSurveyClick}
+              className="bg-[#7773E1] text-white px-6 py-3 rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-colors"
+            >
+              Join the waitlist
             </button>
           </div>
 

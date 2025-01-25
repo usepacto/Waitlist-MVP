@@ -13,17 +13,17 @@ const features: Feature[] = [
   {
     title: 'Spend Confidently',
     description: 'Once you\'ve set your budget, Pacto does the heavy lifting.',
-    icon: '/feature0.svg',
+    icon: '/Feature0.svg',
   },
   {
     title: 'Easy Budget Creation.',
     description: 'Set up a highly personalized spending plan in a few clicks.',
-    icon: '/feature1.svg',
+    icon: '/Feature1.svg',
   },
   {
     title: 'Automated Budgeting',
     description: 'Set aside funds in advance for your monthly bills and subscription fees.',
-    icon: '/feature2.svg',
+    icon: '/Feature2.svg',
   },
 ];
 

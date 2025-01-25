@@ -1,8 +1,15 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const FinalCTA: React.FC = () => {
+  const router = useRouter();
+  
+  const handleSurveyClick = () => {
+    router.push('/survey');
+  };
+
   return (
     <section className="w-full min-h-[439px] py-16 md:py-[120px] bg-[#fafcfe] flex justify-center items-center">
       <div className="w-full max-w-[800px] px-6 md:px-[25px] flex flex-col justify-center items-center gap-8 md:gap-[50px]">
@@ -14,10 +21,11 @@ const FinalCTA: React.FC = () => {
             Take control with a budgeting partner that does the legwork for you...
           </p>
         </div>
-        <button className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors">
-          <span className="text-[#fcfcfc] text-base font-medium font-['Geist'] leading-normal">
-            Join the Waitlist
-          </span>
+        <button 
+          onClick={handleSurveyClick}
+          className="bg-[#7773E1] text-white px-6 py-3 rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-colors"
+        >
+          Join the waitlist
         </button>
       </div>
     </section>

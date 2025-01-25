@@ -3,8 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Footer: React.FC = () => {
+  const router = useRouter();
+  
+  const handleSurveyClick = () => {
+    router.push('/survey');
+  };
+
   return (
     <footer className="w-full min-h-[359px] px-20 py-12 bg-[#fafcfe]">
       <div className="w-full h-[263px] flex flex-col justify-start items-start gap-12">
@@ -19,10 +26,11 @@ const Footer: React.FC = () => {
                 Join our waitlist and be one of the first to try out Pacto
               </p>
             </div>
-            <button className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors">
-              <span className="text-[#fcfcfc] text-base font-medium font-['Geist'] leading-normal">
-                Join the Waitlist
-              </span>
+            <button 
+              onClick={handleSurveyClick}
+              className="bg-[#7773E1] text-white px-6 py-3 rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-colors"
+            >
+              Join the waitlist
             </button>
           </div>
         </div>
