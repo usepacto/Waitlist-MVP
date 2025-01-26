@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: '--font-inter',
-});
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pacto - Smart Money Management",
+  title: "Pacto",
   description: "Simplify your money management with Pacto",
 };
 
@@ -19,8 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://vercel.com/font/geist-sans" />
+      </head>
+      <body className="font-geist">{children}</body>
     </html>
   );
 }

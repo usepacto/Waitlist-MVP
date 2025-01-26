@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+export const SURVEY_URL = "https://tally.so/r/mOPMRd";
+
 const Context: React.FC = () => {
   return (
     <section className="w-full py-24 flex justify-center items-center">
