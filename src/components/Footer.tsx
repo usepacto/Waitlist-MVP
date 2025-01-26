@@ -3,11 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SURVEY_URL } from './Context';
+import { useRouter } from 'next/navigation';
 
 const Footer: React.FC = () => {
+  const router = useRouter();
+  
   const handleSurveyClick = () => {
-    window.open(SURVEY_URL, '_blank');
+    router.push('/survey');
   };
 
   return (

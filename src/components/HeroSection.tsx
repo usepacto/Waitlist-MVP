@@ -2,11 +2,13 @@
 
 import * as React from 'react';
 import Image from 'next/image';
-import { SURVEY_URL } from './Context';
+import { useRouter } from 'next/navigation';
 
 export default function HeroSection(): React.ReactElement {
+  const router = useRouter();
+  
   const handleSurveyClick = () => {
-    window.open(SURVEY_URL, '_blank');
+    router.push('/survey');
   };
 
   return (
