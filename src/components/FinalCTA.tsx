@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react';
+
 import { SURVEY_URL } from './Context';
 
 const FinalCTA: React.FC = () => {
   const handleSurveyClick = () => {
     window.open(SURVEY_URL, '_blank');
+
   };
 
   return (
@@ -21,11 +23,13 @@ const FinalCTA: React.FC = () => {
         </div>
         <button 
           onClick={handleSurveyClick}
+
           className="px-6 py-3 bg-[#7773e1] rounded-[14px] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors"
         >
           <span className="text-[#fcfcfc] text-base font-medium font-['Geist'] leading-normal">
             Join the Waitlist
           </span>
+
         </button>
       </div>
     </section>

@@ -2,11 +2,13 @@
 
 import * as React from 'react';
 import Image from 'next/image';
+
 import { SURVEY_URL } from './Context';
 
 export default function HeroSection(): React.ReactElement {
   const handleSurveyClick = () => {
     window.open(SURVEY_URL, '_blank');
+
   };
 
   return (
@@ -45,11 +47,13 @@ export default function HeroSection(): React.ReactElement {
             {/* Button with refined mobile spacing */}
             <button 
               onClick={handleSurveyClick}
+
               className="mt-3 md:mt-0 px-6 py-3 md:px-7 md:py-4 bg-[#7773e1] rounded-xl md:rounded-2xl inline-flex justify-center items-center hover:bg-opacity-90 transition-all"
             >
               <span className="text-[#fcfcfc] text-base md:text-xl font-medium font-sans leading-normal">
                 Join the waitlist
               </span>
+
             </button>
           </div>
 
