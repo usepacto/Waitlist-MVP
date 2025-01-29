@@ -12,57 +12,57 @@ export default function HeroSection(): React.ReactElement {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-white via-[#f8f8ff] to-white overflow-hidden">
-      {/* Main container with natural height and centered content */}
-      <div className="w-full min-h-[90vh] md:min-h-[1280px] flex items-start md:items-center">
-        {/* Content wrapper with refined spacing */}
-        <div className="w-full px-4 md:px-24 pt-6 md:pt-32 flex flex-col items-center gap-5 md:gap-16 lg:gap-32">
+    <section className="w-full bg-gradient-to-b from-[#ffffff] via-[#f0f0ff] to-[#ffffff] overflow-hidden">
+      {/* Outer wrapper: ensures min height, bottom padding, center alignment */}
+      <div className="w-full min-h-[1280px] pb-[171px] flex justify-center items-center">
+        {/* Inner container: increased top padding, large gap between text+button and image */}
+        <div className="w-full px-6 md:px-24 pt-24 md:pt-32 flex flex-col justify-start items-center gap-16 md:gap-32">
           
-          {/* TEXT + BUTTON GROUP with mobile-optimized gaps */}
-          <div className="flex flex-col items-center gap-3 md:gap-6 w-full">
-            {/* Title + Subtext with improved spacing */}
-            <div className="flex flex-col items-center gap-2 md:gap-3 w-full">
-              <h1 className="w-full text-center max-w-[95%] md:max-w-[90%] mx-auto">
-                <span className="text-[#303030] text-[2.75rem] sm:text-5xl md:text-6xl lg:text-8xl font-bold font-sans leading-[1.15] md:leading-tight lg:leading-[113.28px]">
+          {/* TEXT + BUTTON GROUP (Auto layout with 24px gap) */}
+          <div className="flex flex-col items-center gap-6">
+            {/* Title + Subtext */}
+            <div className="flex flex-col items-center gap-2">
+              <h1 className="w-full text-center">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
                   The{' '}
                 </span>
-                <span className="text-[#303030] text-[2.75rem] sm:text-5xl md:text-6xl lg:text-8xl font-bold font-sans leading-[1.15] md:leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
                   easiest{' '}
                 </span>
-                <span className="text-[#303030] text-[2.75rem] sm:text-5xl md:text-6xl lg:text-8xl font-bold font-sans leading-[1.15] md:leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
                   way to{' '}
                 </span>
-                <span className="text-[#303030] text-[2.75rem] sm:text-5xl md:text-6xl lg:text-8xl font-bold font-sans leading-[1.15] md:leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
                   manage{' '}
                 </span>
-                <span className="text-[#303030] text-[2.75rem] sm:text-5xl md:text-6xl lg:text-8xl font-bold font-sans leading-[1.15] md:leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
                   money.
                 </span>
               </h1>
-              <p className="text-[#616161] text-lg sm:text-xl md:text-2xl lg:text-[32px] font-normal font-sans leading-snug md:leading-relaxed max-w-[92%] md:max-w-[90%] mx-auto text-center mt-1">
+              <p className="text-[#616161] text-xl md:text-2xl lg:text-[32px] font-normal font-['Geist'] leading-relaxed lg:leading-[38.40px] text-center">
                 Stay in control of your finances because we make it easy.
               </p>
             </div>
 
-            {/* Button with refined mobile spacing */}
+            {/* Button (24px below subtext thanks to gap-6) */}
             <button 
               onClick={handleSurveyClick}
-              className="mt-3 md:mt-0 px-6 py-3 md:px-7 md:py-4 bg-[#7773e1] rounded-xl md:rounded-2xl inline-flex justify-center items-center hover:bg-opacity-90 transition-all"
+              className="px-7 py-4 bg-[#7773e1] rounded-2xl inline-flex justify-center items-center hover:bg-opacity-90 transition-all"
             >
-              <span className="text-[#fcfcfc] text-base md:text-xl font-medium font-sans leading-normal">
+              <span className="text-[#fcfcfc] text-xl font-medium font-['Inter'] leading-normal">
                 Join the waitlist
               </span>
             </button>
           </div>
 
-          {/* IMAGE CONTAINER with optimized spacing */}
-          <div className="w-full px-3 sm:px-4 md:px-20 lg:px-40 mt-5 md:mt-0">
+          {/* IMAGE CONTAINER (Spacing preserved by gap-16 md:gap-32) */}
+          <div className="w-full px-4 md:px-20 lg:px-40">
             <Image
               src="/HeroImage.svg"
               alt="Hero Image"
               width={1024}
               height={640}
-              className="w-full h-auto rounded-lg md:rounded-xl border border-[#e2e2e2] shadow-sm"
+              className="w-full h-auto rounded-xl border border-[#e2e2e2]"
               priority
             />
           </div>
