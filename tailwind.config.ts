@@ -16,6 +16,9 @@ export default {
         'primary-gradient-via': '#e0e0ff',
         'primary-gradient-to': '#fbfbfe',
       },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
