@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
   return (
     <section className="w-full px-4 sm:px-6 md:px-[142px] py-12 bg-[#fafcfe]">
       <div className="max-w-[1156px] mx-auto">
-        <h2 className="text-center text-[#303030] text-3xl sm:text-4xl font-bold font-['Geist'] leading-[43.20px] mb-12">
+        <h2 className="text-center text-[#303030] text-3xl sm:text-4xl font-bold leading-[43.20px] mb-12">
           Frequently asked questions
         </h2>
         <div className="flex flex-col justify-start items-start w-full">
@@ -49,7 +49,7 @@ const FAQ: React.FC = () => {
                 className="w-full flex justify-between items-center gap-2 cursor-pointer text-left"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h3 className="text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+                <h3 className="text-[#303030] text-lg sm:text-xl font-bold leading-normal">
                   {item.question}
                 </h3>
                 <div className="w-5 h-5 flex items-center justify-center">
@@ -60,7 +60,7 @@ const FAQ: React.FC = () => {
               </button>
               {openIndex === index && (
                 <div className="w-full">
-                  <p className="text-[#8b8b8b] text-sm sm:text-base font-normal font-['Geist'] leading-tight">
+                  <p className="text-[#8b8b8b] text-sm sm:text-base font-normal leading-tight">
                     {item.answer}
                   </p>
                 </div>

@@ -23,23 +23,23 @@ export default function HeroSection(): React.ReactElement {
             {/* Title + Subtext */}
             <div className="flex flex-col items-center gap-2">
               <h1 className="w-full text-center">
-                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold leading-tight lg:leading-[113.28px]">
                   The{' '}
                 </span>
-                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold leading-tight lg:leading-[113.28px]">
                   easiest{' '}
                 </span>
-                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold leading-tight lg:leading-[113.28px]">
                   way to{' '}
                 </span>
-                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold leading-tight lg:leading-[113.28px]">
                   manage{' '}
                 </span>
-                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold font-['Geist'] leading-tight lg:leading-[113.28px]">
+                <span className="text-[#303030] text-4xl md:text-6xl lg:text-8xl font-bold leading-tight lg:leading-[113.28px]">
                   money.
                 </span>
               </h1>
-              <p className="text-[#616161] text-xl md:text-2xl lg:text-[32px] font-normal font-['Geist'] leading-relaxed lg:leading-[38.40px] text-center">
+              <p className="text-[#616161] text-xl md:text-2xl lg:text-[32px] font-normal leading-relaxed lg:leading-[38.40px] text-center">
                 Stay in control of your finances because we make it easy.
               </p>
             </div>
@@ -49,7 +49,7 @@ export default function HeroSection(): React.ReactElement {
               onClick={handleSurveyClick}
               className="px-7 py-4 bg-[#7773e1] rounded-2xl inline-flex justify-center items-center hover:bg-opacity-90 transition-all"
             >
-              <span className="text-[#fcfcfc] text-xl font-medium font-['Inter'] leading-normal">
+              <span className="text-[#fcfcfc] text-xl font-medium leading-normal">
                 Join the waitlist
               </span>
             </button>

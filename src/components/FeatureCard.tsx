@@ -22,10 +22,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon }) =
         />
       </div>
       <div className="flex flex-col justify-start items-start gap-1">
-        <h3 className="text-[#303030] text-2xl font-medium font-['Geist'] underline leading-loose">
+        <h3 className="text-[#303030] text-2xl font-medium underline leading-loose">
           {title}
         </h3>
-        <p className="text-[#616161] text-xl font-normal font-['Geist'] leading-normal">
+        <p className="text-[#616161] text-xl font-normal leading-normal">
           {description}
         </p>
       </div>

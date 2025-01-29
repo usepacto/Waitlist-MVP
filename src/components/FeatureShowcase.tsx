@@ -33,14 +33,13 @@ const FeatureShowcase: React.FC = () => {
       <div className="max-w-[1440px] w-full px-6 md:px-10 flex flex-col lg:flex-row justify-between items-start gap-20">
         {/* Left Column */}
         <div className="w-full lg:w-[640px] flex flex-col justify-start items-center lg:items-start text-center lg:text-left">
-          <h2 className="text-[#303030] text-4xl font-bold font-['Geist'] leading-[43.20px] mb-4">
+          <h2 className="text-[#303030] text-4xl font-bold leading-[43.20px] mb-4">
             Pacto is built to give you control over your money
           </h2>
           <div className="flex flex-col gap-1">
-            <p className="text-[#616161] text-xl font-normal font-['Geist'] leading-normal">
+            <p className="text-[#616161] text-xl font-normal leading-normal">
               Managing money should be effortlessly easy easy, all you should need to do is think about what you want and plan for it.
             </p>
-            
           </div>
         </div>
 

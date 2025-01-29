@@ -208,11 +208,11 @@ const Survey: React.FC = () => {
           value={formData[getOtherFieldName(field)] as string}
           onChange={(e) => handleTextChange(getOtherFieldName(field), e.target.value)}
           placeholder="Please specify"
-          className="flex-1 px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal font-['Geist']"
+          className="flex-1 px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal"
           autoFocus
         />
       ) : (
-        <div className="text-[#303030] text-base font-normal font-['Geist'] leading-tight group-hover:text-[#7773E1]/70 transition-colors">
+        <div className="text-[#303030] text-base font-normal leading-tight group-hover:text-[#7773E1]/70 transition-colors">
           {option}
         </div>
       )}
@@ -245,11 +245,11 @@ const Survey: React.FC = () => {
           value={formData[getOtherFieldName(field)] as string}
           onChange={(e) => handleTextChange(getOtherFieldName(field), e.target.value)}
           placeholder="Please specify"
-          className="flex-1 px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal font-['Geist']"
+          className="flex-1 px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal"
           autoFocus
         />
       ) : (
-        <div className="text-[#303030] text-base font-normal font-['Geist'] leading-tight group-hover:text-[#7773E1]/70 transition-colors">
+        <div className="text-[#303030] text-base font-normal leading-tight group-hover:text-[#7773E1]/70 transition-colors">
           {option}
         </div>
       )}
@@ -261,7 +261,7 @@ const Survey: React.FC = () => {
       <div className="w-full flex-col justify-start items-start gap-8 sm:gap-12 flex">
         {/* Question 1 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             What is your biggest challenge when it comes to managing your money?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -277,7 +277,7 @@ const Survey: React.FC = () => {
 
         {/* Question 2 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             How often do you feel in control of your financial situation?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -289,7 +289,7 @@ const Survey: React.FC = () => {
 
         {/* Question 3 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             What causes you the most stress about your finances?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -308,7 +308,7 @@ const Survey: React.FC = () => {
       <div className="w-full flex-col justify-start items-start gap-8 sm:gap-12 flex">
         {/* Question 1 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             Do you currently follow a budget?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -318,7 +318,7 @@ const Survey: React.FC = () => {
 
         {/* Question 2 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             How do you typically plan your expenses?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -335,7 +335,7 @@ const Survey: React.FC = () => {
                   value={formData.expensePlanningApp}
                   onChange={(e) => handleTextChange('expensePlanningApp', e.target.value)}
                   placeholder="What app(s) do you use?"
-                  className="w-full px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal font-['Geist']"
+                  className="w-full px-2 py-1 border-b-2 border-[#7773E1] focus:outline-none bg-transparent text-base font-normal"
                   autoFocus
                 />
               </div>
@@ -346,7 +346,7 @@ const Survey: React.FC = () => {
 
         {/* Question 3 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             Do you automate any financial processes (e.g., savings, bill payments)?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -363,7 +363,7 @@ const Survey: React.FC = () => {
     <div className="w-full flex-col justify-start items-center gap-8 flex">
       <div className="w-full flex-col justify-start items-start gap-8 sm:gap-12 flex">
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             What things are most important to you every month?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -386,7 +386,7 @@ const Survey: React.FC = () => {
       <div className="w-full flex-col justify-start items-start gap-8 sm:gap-12 flex">
         {/* Question 1 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             How often do you review your financial situation (e.g., income, expenses, savings)?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -403,7 +403,7 @@ const Survey: React.FC = () => {
 
         {/* Question 2 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             What has stopped you from sticking to financial plans in the past?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -425,7 +425,7 @@ const Survey: React.FC = () => {
       <div className="w-full flex-col justify-start items-start gap-8 sm:gap-12 flex">
         {/* Question 1 */}
         <div className="w-full flex-col justify-start items-start gap-4 sm:gap-6 flex">
-          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <div className="w-full text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             How would you describe your approach to managing money?
           </div>
           <div className="w-full flex-col justify-start items-start gap-2 flex">
@@ -440,10 +440,10 @@ const Survey: React.FC = () => {
 
         {/* Question 2 */}
         <div className="w-full">
-          <span className="text-[#303030] text-lg sm:text-xl font-bold font-['Geist'] leading-normal">
+          <span className="text-[#303030] text-lg sm:text-xl font-bold leading-normal">
             If you would be interested in an app that always helps you stay within budget and ensure your salary lasts till the next payday leave your phone number.{' '}
           </span>
-          <span className="text-[#303030] text-base sm:text-lg font-normal font-['Geist'] leading-normal">
+          <span className="text-[#303030] text-base sm:text-lg font-normal leading-normal">
             (we are a small team trying to build a great product we would appreciate you leaving this blank instead of giving us a fake number)
           </span>
         </div>
@@ -454,7 +454,7 @@ const Survey: React.FC = () => {
               placeholder="Enter your phone number"
               value={formData.phoneNumber}
               onChange={(e) => handlePhoneChange(e.target.value)}
-              className={`w-full text-base font-normal font-['Geist'] leading-tight border-b-2 ${
+              className={`w-full text-base font-normal border-b-2 ${
                 validationErrors.phoneNumber ? 'border-red-500' : 'border-[#aeaeae]'
               } focus:outline-none focus:border-[#7773E1] bg-transparent p-2`}
             />
@@ -531,7 +531,7 @@ const Survey: React.FC = () => {
                 priority
               />
             </div>
-            <div className="text-center text-[#303030] text-base sm:text-lg font-normal font-['Geist'] leading-snug px-4 max-w-[600px]">
+            <div className="text-center text-[#303030] text-base sm:text-lg font-normal leading-snug px-4 max-w-[600px]">
               We are on a mission to make good money habits so intuitive they become second nature.
             </div>
           </div>
