@@ -2,22 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-light: #fafcfe;
+  --text-dark: #303030;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles */
 body {
   color: var(--foreground);
   background: var(--background);
   font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03", "cv04";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  /* Text styles */
+  .text-mobile-primary {
+    @apply text-text font-sans text-mobile-heading font-medium;
+  }
+
+  .text-mobile-secondary {
+    @apply text-text-secondary font-sans text-mobile-body font-light;
+  }
+
+  .text-mobile-accent {
+    @apply text-text/90 font-sans text-mobile-body font-light;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-primary text-white rounded-lg px-3 py-2 text-mobile-body font-medium hover:bg-primary/90 transition-colors;
+  }
 }
