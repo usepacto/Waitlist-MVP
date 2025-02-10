@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
   return (
     <section
       className={`
-        w-full bg-transparent
+        w-full bg-[#fbfbfe]
         /* PHONE */
         px-4 py-8
         /* TABLET */

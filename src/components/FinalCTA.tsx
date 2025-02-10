@@ -13,7 +13,7 @@ const FinalCTA: React.FC = () => {
   return (
     <section
       className={`
-        w-full bg-transparent flex justify-center items-center
+        w-full bg-[#fbfbfe] flex justify-center items-center
         /* PHONE */
         min-h-[359px] py-12
         /* TABLET */
