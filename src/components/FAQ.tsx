@@ -41,10 +41,10 @@ const FAQ: React.FC = () => {
     <div className="h-[617px] px-16 py-12 bg-[#fbfbfe] justify-start items-start gap-10 inline-flex overflow-hidden">
       {/* Title Section */}
       <div className="w-[415px] py-[18px] flex-col justify-center items-start gap-3 inline-flex">
-        <div className="text-[#303030] text-4xl font-bold font-['Geist'] leading-[43.20px]">
+        <div className="text-[#303030] text-4xl font-bold font-sans leading-[43.20px]">
           Frequently asked questions
         </div>
-        <div className="text-[#303030] text-2xl font-normal font-['Geist'] leading-[28.80px]">
+        <div className="text-[#303030] text-2xl font-normal font-sans leading-[28.80px]">
           Have questions or need some Help?
         </div>
       </div>
@@ -58,7 +58,7 @@ const FAQ: React.FC = () => {
             onClick={() => toggleAccordion(index)}
           >
             <div className="self-stretch justify-start items-center gap-2 inline-flex">
-              <div className="grow shrink basis-0 text-[#303030] text-xl font-bold font-['Geist'] leading-normal">
+              <div className="grow shrink basis-0 text-[#303030] text-xl font-bold font-sans leading-normal">
                 {item.question}
               </div>
               <div className="w-5 h-5 relative overflow-hidden">
@@ -77,7 +77,7 @@ const FAQ: React.FC = () => {
                 openIndex === index ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'
               }`}
             >
-              <div className="grow shrink basis-0 text-[#8b8b8b] text-base font-normal font-['Geist'] leading-tight">
+              <div className="grow shrink basis-0 text-[#8b8b8b] text-base font-normal font-sans leading-tight">
                 {item.answer}
               </div>
             </div>
