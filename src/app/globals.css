@@ -2,39 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Root variables */
+/* -------------------------------- */
+/* Root Variables                   */
+/* -------------------------------- */
 :root {
+  /* Colors */
   --background: #ffffff;
-  --foreground: #171717;
   --background-light: #fafcfe;
-  --text-dark: #303030;
+  --foreground: #171717;
+  --text-primary: #303030;
+  --text-secondary: #616161;
+  --primary: #7773e1;
+  --primary-hover: #6561c9;
+  
+  /* Font Features */
+  --font-features: 'ss01', 'ss02', 'cv01', 'cv02', 'cv03', 'cv04';
+  
+  /* Transitions */
+  --transition-base: all 0.2s ease-in-out;
 }
 
-/* Base styles */
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03", "cv04";
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+/* -------------------------------- */
+/* Base Styles                      */
+/* -------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-[#171717];
+    font-feature-settings: var(--font-features);
+  }
 }
 
+/* -------------------------------- */
+/* Component Classes                */
+/* -------------------------------- */
 @layer components {
-  /* Text styles */
+  /* Text Styles */
   .text-mobile-primary {
-    @apply text-text font-sans text-mobile-heading font-medium;
+    @apply text-[#303030] font-['Geist'] text-mobile-heading font-medium;
   }
 
   .text-mobile-secondary {
-    @apply text-text-secondary font-sans text-mobile-body font-light;
+    @apply text-[#616161] font-['Geist'] text-mobile-body font-light;
   }
 
   .text-mobile-accent {
-    @apply text-text/90 font-sans text-mobile-body font-light;
+    @apply text-[#303030]/90 font-['Geist'] text-mobile-body font-light;
   }
 
-  /* Button styles */
+  /* Button Styles */
   .btn-primary {
-    @apply bg-primary text-white rounded-lg px-3 py-2 text-mobile-body font-medium hover:bg-primary/90 transition-colors;
+    @apply bg-[#7773e1] text-white rounded-lg px-3 py-2 text-mobile-body font-medium 
+           hover:bg-[#6561c9] transition-all duration-200;
+  }
+
+  /* Container Styles */
+  .container-mobile {
+    @apply w-full px-4 py-6 md:px-6 md:py-8 lg:px-[25px] lg:py-10;
+  }
+
+  /* Layout Styles */
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  /* Card Styles */
+  .card-mobile {
+    @apply bg-white rounded-lg p-4 shadow-sm;
+  }
+}
+
+/* -------------------------------- */
+/* Utility Classes                  */
+/* -------------------------------- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .transition-base {
+    transition: var(--transition-base);
   }
 }

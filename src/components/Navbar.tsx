@@ -7,25 +7,25 @@ export default function Navbar() {
   return (
     <nav
       className={`
-        w-full 
-        bg-[#fafcfe] 
-        /* Phone (default) styles */
+        w-full bg-[#fbfbfe]
+        /* PHONE */
         h-[32.70px] px-[15px] py-[4.88px]
-        /* Medium screens (e.g., 13-inch) */
+        /* TABLET */
         md:h-[53.86px] md:px-6 md:py-[10.42px]
-        /* Large and XL screens */
-        lg:px-[25px] lg:py-[18px]
+        /* DESKTOP */
+        lg:h-[72px] lg:px-[25px] lg:py-[18px]
       `}
     >
+      {/* Logo Container */}
       <div className="inline-flex justify-between items-center w-full">
         <div
           className={`
-            relative overflow-hidden 
-            /* Phone: logo container dimensions */
+            relative overflow-hidden
+            /* PHONE */
             w-[60px] h-[22.95px]
-            /* Medium: logo container dimensions */
+            /* TABLET */
             md:w-[86.30px] md:h-[33.01px]
-            /* Large: logo container dimensions */
+            /* DESKTOP */
             lg:w-[150px] lg:h-auto
           `}
         >

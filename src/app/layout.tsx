@@ -13,8 +13,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} font-sans antialiased`}>
-      <body className="min-h-screen">{children}</body>
+    <html
+      lang="en"
+      className={GeistSans.variable}
+    >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body
+        className={`
+          min-h-screen
+          text-[#303030]
+          font-sans
+          bg-white
+          antialiased
+          text-rendering-optimizeLegibility
+        `}
+      >
+        {children}
+      </body>
     </html>
   );
 }
