@@ -1,16 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import Survey from './SurveyComponent';
 
-const Footer: React.FC = () => {
-  const router = useRouter();
+interface FooterProps {
+  onSurveyShow: () => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onSurveyShow }) => {
+  const [showSurvey, setShowSurvey] = useState(false);
   
   const handleSurveyClick = () => {
-    router.push('/survey');
+    onSurveyShow();
   };
+
+  if (showSurvey) {
+    return <Survey onClose={() => setShowSurvey(false)} />;
+  }
 
   return (
     <footer

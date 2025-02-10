@@ -3,15 +3,19 @@
 import React, { useState } from 'react';
 import Survey from './SurveyComponent';
 
-const FinalCTA: React.FC = () => {
+interface FinalCTAProps {
+  onSurveyShow: () => void;
+}
+
+const FinalCTA: React.FC<FinalCTAProps> = ({ onSurveyShow }) => {
   const [showSurvey, setShowSurvey] = useState(false);
   
   const handleSurveyClick = () => {
-    setShowSurvey(true);
+    onSurveyShow();
   };
 
   if (showSurvey) {
-    return <Survey />;
+    return <Survey onClose={() => setShowSurvey(false)} />;
   }
 
   return (

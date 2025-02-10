@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import Context from '../components/Context';
@@ -11,6 +11,16 @@ import Footer from '../components/Footer';
 import Survey from '../components/SurveyComponent';
 
 export default function Home() {
+  const [showingSurvey, setShowingSurvey] = useState(false);
+
+  const handleSurveyClose = () => {
+    setShowingSurvey(false);
+  };
+
+  if (showingSurvey) {
+    return <Survey onClose={handleSurveyClose} />;
+  }
+
   return (
     <main
       className={`
@@ -26,12 +36,12 @@ export default function Home() {
     >
       <div className="w-full max-w-[1440px] flex flex-col items-center">
         <Navbar />
-        <HeroSection />
+        <HeroSection onSurveyShow={() => setShowingSurvey(true)} />
         <Context />
         <FeatureShowcase />
-        <FinalCTA />
+        <FinalCTA onSurveyShow={() => setShowingSurvey(true)} />
         <FAQ />
-        <Footer />
+        <Footer onSurveyShow={() => setShowingSurvey(true)} />
       </div>
     </main>
   );

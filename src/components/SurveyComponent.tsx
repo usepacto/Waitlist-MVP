@@ -30,7 +30,11 @@ interface SurveyData {
   phoneNumber: string;
 }
 
-const Survey: React.FC = () => {
+interface SurveyProps {
+  onClose: () => void;
+}
+
+const Survey: React.FC<SurveyProps> = ({ onClose }) => {
   const router = useRouter();
   const [currentScreen, setCurrentScreen] = useState(1);
   const [showExitConfirmation, setShowExitConfirmation] = useState(false);
@@ -121,7 +125,7 @@ const Survey: React.FC = () => {
   };
 
   const confirmExit = () => {
-    router.push('/'); // Navigate to home page
+    onClose();
   };
 
   const handleSubmit = async () => {

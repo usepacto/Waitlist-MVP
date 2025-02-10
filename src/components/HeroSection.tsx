@@ -1,15 +1,23 @@
 'use client';
 
-import * as React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Survey from './SurveyComponent';
 
-export default function HeroSection(): React.ReactElement {
-  const router = useRouter();
+interface HeroSectionProps {
+  onSurveyShow: () => void;
+}
+
+export default function HeroSection({ onSurveyShow }: HeroSectionProps): React.ReactElement {
+  const [showSurvey, setShowSurvey] = useState(false);
 
   const handleSurveyClick = () => {
-    router.push('/survey');
+    onSurveyShow();
   };
+
+  if (showSurvey) {
+    return <Survey onClose={() => setShowSurvey(false)} />;
+  }
 
   return (
     <div className="w-[1440px] h-[1328px] pb-[325px] bg-[#fbfbfe] justify-center items-center inline-flex overflow-hidden">
