@@ -45,15 +45,15 @@
 @layer components {
   /* Text Styles */
   .text-mobile-primary {
-    @apply text-[#303030] font-['Geist'] text-mobile-heading font-medium;
+    @apply text-[#303030] font-sans text-mobile-heading font-medium;
   }
 
   .text-mobile-secondary {
-    @apply text-[#616161] font-['Geist'] text-mobile-body font-light;
+    @apply text-[#616161] font-sans text-mobile-body font-light;
   }
 
   .text-mobile-accent {
-    @apply text-[#303030]/90 font-['Geist'] text-mobile-body font-light;
+    @apply text-[#303030]/90 font-sans text-mobile-body font-light;
   }
 
   /* Button Styles */
