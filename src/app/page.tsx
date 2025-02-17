@@ -34,7 +34,7 @@ export default function Home() {
         lg:gap-10
       `}
     >
-      <div className="w-full max-w-[1440px] flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         <Navbar /> 
         <HeroSection onSurveyShow={() => setShowingSurvey(true)} />
         <Context />
