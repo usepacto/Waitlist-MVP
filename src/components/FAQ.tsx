@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -33,47 +34,58 @@ const faqItems: FAQItem[] = [
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="w-full bg-[#fafcfe]">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 md:px-20 py-12">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[#303030] text-2xl sm:text-3xl md:text-4xl font-bold font-['Geist'] leading-tight mb-8 md:mb-12 text-center">
-            Frequently asked questions
-          </h2>
-          <div className="flex flex-col justify-start items-start w-full">
-            {faqItems.map((item, index) => (
-              <div 
-                key={index}
-                className="w-full px-4 py-4 md:py-[18px] border-b border-[#e2e2e2] flex flex-col justify-start items-start gap-2"
-              >
-                <button 
-                  className="w-full flex justify-between items-center gap-2 cursor-pointer text-left"
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                >
-                  <h3 className="text-[#303030] text-base sm:text-lg md:text-xl font-bold font-['Geist'] leading-normal">
-                    {item.question}
-                  </h3>
-                  <div className="w-5 h-5 flex items-center justify-center">
-                    <span className="text-[#303030] text-xl">
-                      {openIndex === index ? '−' : '+'}
-                    </span>
-                  </div>
-                </button>
-                {openIndex === index && (
-                  <div className="w-full">
-                    <p className="text-[#8b8b8b] text-sm sm:text-base font-normal font-['Geist'] leading-tight">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+    <div className="h-[617px] px-16 py-12 bg-[#fbfbfe] justify-start items-start gap-10 inline-flex overflow-hidden">
+      {/* Title Section */}
+      <div className="w-[415px] py-[18px] flex-col justify-center items-start gap-3 inline-flex">
+        <div className="text-[#303030] text-4xl font-bold font-sans leading-[43.20px]">
+          Frequently asked questions
+        </div>
+        <div className="text-[#303030] text-2xl font-normal font-sans leading-[28.80px]">
+          Have questions or need some Help?
         </div>
       </div>
-      {/* Divider after FAQ section */}
-      <div className="w-full border-t border-[#e2e2e2]" />
-    </section>
+
+      {/* FAQ Items Section */}
+      <div className="w-[866px] flex-col justify-start items-start gap-3 inline-flex">
+        {faqItems.map((item, index) => (
+          <div
+            key={index}
+            className="self-stretch px-4 py-[18px] border-b border-[#e2e2e2] flex-col justify-start items-start gap-2 flex cursor-pointer"
+            onClick={() => toggleAccordion(index)}
+          >
+            <div className="self-stretch justify-start items-center gap-2 inline-flex">
+              <div className="grow shrink basis-0 text-[#303030] text-xl font-bold font-sans leading-normal">
+                {item.question}
+              </div>
+              <div className="w-5 h-5 relative overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="block w-4 h-0.5 bg-[#303030]" />
+                  <span 
+                    className={`absolute block w-0.5 h-4 bg-[#303030] transition-all duration-300 ${
+                      openIndex === index ? 'opacity-0 rotate-90' : ''
+                    }`}
+                  />
+                </div>
+              </div>
+            </div>
+            <div 
+              className={`self-stretch justify-center items-center transition-all duration-300 ${
+                openIndex === index ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'
+              }`}
+            >
+              <div className="grow shrink basis-0 text-[#8b8b8b] text-base font-normal font-sans leading-tight">
+                {item.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
