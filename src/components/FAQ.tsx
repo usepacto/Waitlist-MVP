@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="h-[617px] px-16 py-12 bg-[#fbfbfe] justify-start items-start gap-10 inline-flex overflow-hidden">
+    <div className=" w-full h-[617px] px-16 py-12 bg-[#fbfbfe] justify-start items-start gap-10 inline-flex overflow-hidden">
       {/* Title Section */}
       <div className="w-[415px] py-[18px] flex-col justify-center items-start gap-3 inline-flex">
         <div className="text-[#303030] text-4xl font-bold font-sans leading-[43.20px]">
