@@ -49,15 +49,29 @@ export default function HeroSection(): React.ReactElement {
 
           {/* IMAGE CONTAINER with optimized spacing and mobile sizing */}
           <div className="w-full px-2 sm:px-4 md:px-16 lg:px-32">
-            <div className="relative w-full aspect-[16/10]">
-              <Image
-                src="/HeroImage.svg"
-                alt="Hero Image"
-                fill
-                className="object-contain rounded-lg md:rounded-xl border border-[#e2e2e2] shadow-sm"
-                priority
-              />
-            </div>
+          <div
+            className="self-stretch h-auto md:h-[525px] 2xl:h-[600px] flex-col justify-start items-center gap-2.5 flex"
+          >
+            {/* -----------------------------------------------------------------
+                Next.js Image Component for the Hero Image
+            */}
+            <Image
+              src="/HeroImage2.svg" // Mobile image
+              alt="Hero Image for mobile"
+              width={370}
+              height={425}
+              className="w-full h-auto rounded-xl block md:hidden"
+              priority
+            />
+            <Image
+              src="/HeroImage.svg" // Desktop image
+              alt="Hero Image"
+              width={1024}
+              height={640}
+              className="hidden md:block w-full md:w-[1024px] h-auto rounded-xl shadow-[0px_50px_50px_0px_rgba(0,0,0,0.03)] border border-[#e2e2e2]"
+              priority
+            />
+          </div>
           </div>
         </div>
       </div>
