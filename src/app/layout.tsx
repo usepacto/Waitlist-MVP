@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
+      <head>
+        <link rel="icon" href="/pactotabpic.png" type="image/png" />
+      </head>
       <body>{children}</body>
     </html>
   );
