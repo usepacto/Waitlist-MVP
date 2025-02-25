@@ -65,7 +65,7 @@ const FeatureShowcase: React.FC = () => {
             - pb-4: Applies bottom padding of 4 pixels.
             - lg:pb-0: Removes bottom padding on larger screens.
         ---------------------------------------------------------------- */}
-        <div className="w-full lg:w-auto flex-col justify-center items-center gap-3 flex pb-4 lg:pb-0">
+        <div className="w-full lg:w-auto flex-col justify-center items-center gap-1 flex pb-4 lg:pb-0">
           
           {/* First Header Line */}
           <div className="text-[#616161] text-l sm:text-xl md:text-3xl font-normal font-sans leading-loose">
@@ -73,8 +73,8 @@ const FeatureShowcase: React.FC = () => {
           </div>
           
           {/* Main Header Text */}
-          <div className="text-[#0a092a] text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold font-sans leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-center">
-            I wish I had a second chance <br />with all that money I wasted!?
+          <div className="text-[#0a092a] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold font-sans leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-center">
+            I wish I had a second chance with all that money I wasted!
           </div>
           {/* Subheader Text */}
           <div className="text-[#616161] text-l sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-semibold font-sans leading-loose">

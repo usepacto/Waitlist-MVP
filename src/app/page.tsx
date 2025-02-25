@@ -17,6 +17,15 @@ export default function Home() {
     setShowingSurvey(false);
   };
 
+  const handleSurveyShow = () => {
+    // Scroll to top before showing survey
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Wait for scroll to complete before showing survey
+    setTimeout(() => {
+      setShowingSurvey(true);
+    }, 300);
+  };
+
   if (showingSurvey) {
     return <Survey onClose={handleSurveyClose} />;
   }
@@ -36,12 +45,12 @@ export default function Home() {
     >
       <div className="w-full flex flex-col items-center">
         <Navbar /> 
-        <HeroSection onSurveyShow={() => setShowingSurvey(true)} />
+        <HeroSection onSurveyShow={handleSurveyShow} />
         <Context />
         <FeatureShowcase />
-        <FinalCTA onSurveyShow={() => setShowingSurvey(true)} />
+        <FinalCTA onSurveyShow={handleSurveyShow} />
         <FAQ />
-        <Footer onSurveyShow={() => setShowingSurvey(true)} />
+        <Footer onSurveyShow={handleSurveyShow} />
       </div>
     </main>
   );
