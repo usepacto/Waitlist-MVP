@@ -21,102 +21,35 @@ const Footer: React.FC<FooterProps> = ({ onSurveyShow }) => {
   }
 
   return (
-    <footer
-      className={`
-        w-full bg-gradient-to-b from-[#fbfbfe] via-[#f0f0ff] to-[#DAD9F1]
-        /* PHONE */
-        min-h-[359px] px-4 py-8
-        /* TABLET */
-        md:px-12 md:py-10
-        /* DESKTOP */
-        lg:px-20 lg:py-12
-      `}
-    >
-      {/* Main Container */}
-      <div
-        className={`
-          w-full flex flex-col justify-start items-start
-          /* PHONE */
-          h-[263px] gap-8
-          /* TABLET */
-          md:gap-10
-          /* DESKTOP */
-          lg:gap-12
-        `}
-      >
+    <footer className="w-full bg-gradient-to-b from-[#fbfbfe] via-[#f0f0ff] to-[#DAD9F1] px-6 md:px-16 2xl:px-20 py-8 sm:py-12 md:py-16">
+      <div className="w-full max-w-7xl mx-auto flex flex-col justify-start items-start gap-8 sm:gap-10 md:gap-12">
         {/* Top Section */}
-        <div className="w-full flex justify-center items-end gap-10">
-          <div className="grow shrink basis-0 flex flex-col justify-center items-start gap-8">
-            {/* Text Content */}
-            <div className="flex flex-col justify-start items-start gap-2">
-              <h2
-                className={`
-                  w-full text-[#303030] font-sans
-                  /* PHONE */
-                  text-2xl font-bold leading-[33.60px]
-                  /* TABLET */
-                  md:text-3xl md:leading-[38.40px]
-                  /* DESKTOP */
-                  lg:text-4xl lg:leading-[43.20px]
-                `}
-              >
-                Get early access to Pacto
-              </h2>
-              <p
-                className={`
-                  w-full text-[#8b8b8b] font-sans
-                  /* PHONE */
-                  text-sm font-normal leading-tight
-                  /* TABLET */
-                  md:text-base
-                `}
-              >
-                Join our waitlist and be one of the first to try out Pacto
-              </p>
-            </div>
-
-            {/* CTA Button */}
-            <button 
-              onClick={handleSurveyClick}
-              className={`
-                bg-[#7773e1] flex justify-center items-center hover:bg-[#7773e1]/90 transition-colors
-                /* PHONE */
-                px-4 py-2 rounded-lg
-                /* TABLET */
-                md:px-5 md:py-2.5 md:rounded-xl
-                /* DESKTOP */
-                lg:px-6 lg:py-3 lg:rounded-[14px]
-              `}
-            >
-              <span
-                className={`
-                  text-[#fcfcfc] font-medium font-sans
-                  /* PHONE */
-                  text-sm leading-normal
-                  /* TABLET */
-                  md:text-base
-                `}
-              >
-                Join the Waitlist
-              </span>
-            </button>
+        <div className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-10">
+          {/* Text Content */}
+          <div className="w-full md:w-auto flex flex-col justify-start items-start gap-2 sm:gap-3 md:gap-4">
+            <h2 className="text-[#303030] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-sans leading-tight">
+              Get early access to Pacto
+            </h2>
+            <p className="text-[#8b8b8b] text-sm sm:text-base md:text-lg lg:text-xl font-normal font-sans leading-relaxed">
+              Join our waitlist and be one of the first to try out Pacto
+            </p>
           </div>
+
+          {/* CTA Button */}
+          <button 
+            onClick={handleSurveyClick}
+            className="px-4 sm:px-5 md:px-6 lg:px-7 py-2 sm:py-3 md:py-4 bg-[#7773e1] rounded-lg sm:rounded-xl md:rounded-2xl justify-center items-center inline-flex hover:bg-[#7773e1]/90 transition-colors"
+          >
+            <span className="text-[#fcfcfc] text-sm sm:text-base md:text-lg font-medium font-sans leading-tight">
+              Join the Waitlist
+            </span>
+          </button>
         </div>
 
         {/* Bottom Section */}
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+        <div className="w-full flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-8 md:gap-10">
           {/* Logo */}
-          <div
-            className={`
-              relative overflow-hidden
-              /* PHONE */
-              w-[100px]
-              /* TABLET */
-              md:w-[120px]
-              /* DESKTOP */
-              lg:w-[150px]
-            `}
-          >
+          <div className="w-[100px] sm:w-[120px] md:w-[150px] relative flex flex-col items-center">
             <Image
               src="/PactoLogo.svg"
               alt="Pacto Logo"
@@ -128,50 +61,20 @@ const Footer: React.FC<FooterProps> = ({ onSurveyShow }) => {
           </div>
 
           {/* Links */}
-          <div
-            className={`
-              flex justify-start items-center
-              /* PHONE */
-              gap-8
-              /* TABLET */
-              md:gap-12
-              /* DESKTOP */
-              lg:gap-16
-            `}
-          >
+          <div className="flex justify-start items-center gap-6 sm:gap-8 md:gap-10">
             <Link
               href="/terms"
-              className={`
-                text-center text-[#616161] font-sans underline
-                /* PHONE */
-                text-[10px] leading-3
-                /* TABLET */
-                md:text-xs md:leading-[14.40px]
-              `}
+              className="text-[#616161] text-xs sm:text-sm md:text-base font-normal font-sans underline hover:text-[#7773e1] transition-colors"
             >
               Terms & Conditions
             </Link>
             <Link
               href="/privacy"
-              className={`
-                text-center text-[#616161] font-sans underline
-                /* PHONE */
-                text-[10px] leading-3
-                /* TABLET */
-                md:text-xs md:leading-[14.40px]
-              `}
+              className="text-[#616161] text-xs sm:text-sm md:text-base font-normal font-sans underline hover:text-[#7773e1] transition-colors"
             >
               Privacy Policy
             </Link>
-            <span
-              className={`
-                text-center text-[#616161] font-sans underline
-                /* PHONE */
-                text-[10px] leading-3
-                /* TABLET */
-                md:text-xs md:leading-[14.40px]
-              `}
-            >
+            <span className="text-[#616161] text-xs sm:text-sm md:text-base font-normal font-sans">
               © 2024
             </span>
           </div>

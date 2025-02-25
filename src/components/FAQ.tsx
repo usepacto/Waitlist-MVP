@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -39,30 +38,30 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className=" w-full h-[617px] px-16 py-12 bg-[#fbfbfe] justify-start items-start gap-10 inline-flex overflow-hidden">
+    <div className="w-full h-auto px-6 md:px-16 py-[60px] md:py-[120px] bg-[#fbfbfe] flex flex-col md:flex-row justify-start items-start gap-10 md:gap-20">
       {/* Title Section */}
-      <div className="w-[415px] py-[18px] flex-col justify-center items-start gap-3 inline-flex">
-        <div className="text-[#303030] text-4xl font-bold font-sans leading-[43.20px]">
+      <div className="w-full md:w-[415px] flex flex-col justify-center items-center md:items-start gap-3">
+        <div className="text-[#303030] text-2xl sm:text-3xl md:text-4xl font-bold font-sans leading-tight text-center md:text-left">
           Frequently asked questions
         </div>
-        <div className="text-[#303030] text-2xl font-normal font-sans leading-[28.80px]">
+        <div className="text-[#303030] text-lg sm:text-xl md:text-2xl font-normal font-sans leading-normal text-center md:text-left">
           Have questions or need some Help?
         </div>
       </div>
 
       {/* FAQ Items Section */}
-      <div className="w-[866px] flex-col justify-start items-start gap-3 inline-flex">
+      <div className="w-full md:w-[866px] flex flex-col justify-start items-start gap-3">
         {faqItems.map((item, index) => (
           <div
             key={index}
-            className="self-stretch px-4 py-[18px] border-b border-[#e2e2e2] flex-col justify-start items-start gap-2 flex cursor-pointer"
+            className="w-full px-4 py-[18px] border-b border-[#e2e2e2] flex flex-col justify-start items-start gap-2 cursor-pointer"
             onClick={() => toggleAccordion(index)}
           >
-            <div className="self-stretch justify-start items-center gap-2 inline-flex">
-              <div className="grow shrink basis-0 text-[#303030] text-xl font-bold font-sans leading-normal">
+            <div className="w-full flex justify-between items-center gap-2">
+              <div className="grow text-[#303030] text-base sm:text-lg md:text-xl font-bold font-sans leading-normal">
                 {item.question}
               </div>
-              <div className="w-5 h-5 relative overflow-hidden">
+              <div className="w-5 h-5 relative overflow-hidden shrink-0">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="block w-4 h-0.5 bg-[#303030]" />
                   <span 
@@ -74,11 +73,11 @@ const FAQ: React.FC = () => {
               </div>
             </div>
             <div 
-              className={`self-stretch justify-center items-center transition-all duration-300 ${
+              className={`w-full transition-all duration-300 ${
                 openIndex === index ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'
               }`}
             >
-              <div className="grow shrink basis-0 text-[#8b8b8b] text-base font-normal font-sans leading-tight">
+              <div className="text-[#8b8b8b] text-sm sm:text-base md:text-lg font-normal font-sans leading-normal">
                 {item.answer}
               </div>
             </div>

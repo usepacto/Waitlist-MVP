@@ -2,9 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Heading Styles */
+  .text-h1 {
+    @apply text-[96px] leading-[100px] font-normal;  /* 96/100 */
+  }
+  
+  .text-h2 {
+    @apply text-[59px] leading-[71px] font-normal;   /* 59/120 */
+  }
+  
+  .text-h3 {
+    @apply text-[36px] leading-[43px] font-normal;   /* 36/120 */
+  }
+  
+  .text-h4 {
+    @apply text-[24px] leading-[29px] font-normal;   /* 24/120 */
+  }
+  
+  .text-h5 {
+    @apply text-[20px] leading-[24px] font-normal;   /* 20/120 */
+  }
+  
+  .text-h6 {
+    @apply text-[16px] leading-[19px] font-normal;   /* 16/120 */
+  }
+
+  /* Body Styles */
+  .text-body-large {
+    @apply text-[20px] leading-[24px] font-normal;   /* 20/120 */
+  }
+  
+  .text-body-large-semibold {
+    @apply text-[20px] leading-[24px] font-semibold; /* 20/120 */
+  }
+  
+  .text-body {
+    @apply text-[16px] leading-[19px] font-normal;   /* 16/120 */
+  }
+  
+  .text-body-semibold {
+    @apply text-[16px] leading-[19px] font-semibold; /* 16/120 */
+  }
+  
+  .text-body-small {
+    @apply text-[14px] leading-[17px] font-normal;   /* 14/120 */
+  }
+  
+  .text-body-small-semibold {
+    @apply text-[14px] leading-[17px] font-semibold; /* 14/120 */
+  }
+
+  /* Caption Styles */
+  .text-caption {
+    @apply text-[12px] leading-[14px] font-normal;   /* 12/120 */
+  }
+  
+  .text-caption-semibold {
+    @apply text-[12px] leading-[14px] font-semibold; /* 12/120 */
+  }
+  
+  .text-caption-underline {
+    @apply text-[12px] leading-[14px] font-normal underline; /* 12/120 */
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-light: #fafcfe;
+  --text-dark: #303030;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +84,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* -------------------------------- */
@@ -36,4 +102,9 @@ body {
 
 .animate-progress {
   animation: progress-fill 0.8s ease-out forwards;
+}
+
+/* Typography */
+.text-heading-large {
+  @apply text-[34.34px] font-semibold leading-[41.21px];
 }

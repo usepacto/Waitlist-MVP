@@ -49,52 +49,49 @@ const Context: React.FC = () => {
     // This container centers its children both horizontally and vertically.
     // ------------------------------------------------------------------
     <section className="w-full flex justify-center items-center">
-    <div className="w-full  h-auto min-h-[300px] px-6 md:px-16 2xl:px-20 pt-20 pb-[120px] bg-[#fbfbfe] flex flex-col lg:flex-row lg:items-start lg:gap-16">
-    
-    {/* Header: Positioned dynamically based on screen size */}
-    <div className="h-auto lg:h-auto justify-start items-start gap-3 flex w-full lg:w-auto pb-4 lg:pb-0">
-      <div className="text-[#616161] text-2xl sm:text-3xl md:text-4xl font-bold font-sans leading-tight">
-        You should spend your money how you want.
-      </div>
-    </div>
-    
-    {/* Content Blocks Container */}
-    <div className="w-full flex flex-col md:flex-row justify-start items-start gap-10">
-      
-      {/* First Content Block */}
-      <div className="w-full md:w-1/2 pt-2 flex flex-col justify-start items-start">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative overflow-hidden">
-          <Image
-            src="/ContextImage1.svg"
-            alt="Context Image 1"
-            width={64}
-            height={64}
-            className="w-full h-full"
-          />
+      <div className="w-full h-auto px-6 md:px-16 lg:px-20 pt-[60px] md:pt-[120px] pb-[60px] md:pb-[120px] bg-[#fbfbfe] flex flex-col lg:flex-row lg:items-start lg:gap-20">
+        {/* Column 1 */}
+        <div className="h-auto lg:h-auto justify-center lg:justify-start items-center lg:items-start gap-3 flex w-full lg:w-[40%]">
+          <div className="text-[#303030] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-sans leading-snug text-center lg:text-left">
+            You should spend your money how you want.
+          </div>
         </div>
-        <div className="self-stretch h-auto text-[#616161] text-lg sm:text-xl md:text-2xl font-normal font-sans leading-relaxed">
-          Pacto is being built because money management should be easy.
-        </div>
-      </div>
+        
+        {/* Column 2 (contains Block 1 and Block 2) */}
+        <div className="w-full mt-[60px] lg:mt-0 lg:w-[60%] flex flex-col md:flex-row justify-start items-start gap-10">
+          {/* Block 1 */}
+          <div className="w-full md:w-1/2 flex flex-row md:flex-col justify-start items-center md:items-start gap-2 md:gap-3 lg:gap-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative overflow-hidden shrink-0">
+              <Image
+                src="/ContextImage1.svg"
+                alt="Context Image 1"
+                width={64}
+                height={64}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-[#616161] text-base sm:text-lg md:text-xl lg:text-2xl font-normal font-sans leading-normal">
+              Pacto is being built because money management should be easy.
+            </div>
+          </div>
 
-      {/* Second Content Block */}
-      <div className="w-full md:w-1/2 pt-2 flex flex-col justify-start items-start">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative overflow-hidden">
-          <Image
-            src="/ContextImage2.svg"
-            alt="Context Image 2"
-            width={64}
-            height={64}
-            className="w-full h-full"
-          />
-        </div>
-        <div className="self-stretch h-auto text-[#616161] text-lg sm:text-xl md:text-2xl font-normal font-sans leading-relaxed">
-          It should be easy to stick to a budget. It should be easy to track your spending.
+          {/* Block 2 */}
+          <div className="w-full md:w-1/2 flex flex-row-reverse md:flex-col justify-start items-center md:items-start gap-2 md:gap-3 lg:gap-4">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 relative overflow-hidden shrink-0">
+              <Image
+                src="/ContextImage2.svg"
+                alt="Context Image 2"
+                width={64}
+                height={64}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-[#616161] text-base sm:text-lg md:text-xl lg:text-2xl font-normal font-sans leading-normal">
+              It should be easy to stick to a budget and track your spending.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-</div>
-
     </section>
   );
 };
