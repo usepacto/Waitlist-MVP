@@ -258,20 +258,36 @@ const Survey: React.FC<SurveyProps> = ({ onClose }) => {
   };
 
   // ===================================================================
+  // Function: validateScreen
+  // -------------------------------------------------------------------
+  // Validates the current screen to ensure all required fields are filled.
+  const validateScreen = (): boolean => {
+    switch (currentScreen) {
+      case 1:
+        return !!formData.biggestChallenge && !!formData.controlFrequency && !!formData.stressCause;
+      case 2:
+        return !!formData.followsBudget && !!formData.expensePlanning && !!formData.automatesFinances;
+      case 3:
+        return formData.monthlyPriorities.length > 0;
+      case 4:
+        return !!formData.reviewFrequency && formData.planningObstacles.length > 0;
+      case 5:
+        return !!formData.moneyManagementApproach && !!formData.phoneNumber;
+      default:
+        return false;
+    }
+  };
+
+  // ===================================================================
   // Function: handleContinue
   // -------------------------------------------------------------------
-  // Advances the survey to the next screen.
-  // Scrolls to the top for a smooth transition before incrementing the screen count.
-  // If on the final screen, it triggers the submission process.
+  // Validates the current screen and moves to the next screen if valid.
   const handleContinue = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
-    setTimeout(() => {
-      if (currentScreen === 5) {
-        handleSubmit();
-        return;
-      }
+    if (validateScreen()) {
       setCurrentScreen(prev => prev + 1);
-    }, 300); // Delay to match the scroll animation duration
+    } else {
+      alert('Please fill in all required fields.');
+    }
   };
 
   // ===================================================================
@@ -756,34 +772,36 @@ const Survey: React.FC<SurveyProps> = ({ onClose }) => {
         </div>
 
         {/* Navigation Buttons: Back and Continue/Submit */}
-        <div className="flex gap-4 sm:gap-6 justify-center items-center w-full px-4 py-6 sm:py-8">
+        <div className="w-full flex justify-between items-center">
           {currentScreen > 1 && (
             <button
               onClick={handleBack}
-              className="w-32 sm:w-40 h-12 px-4 sm:px-6 py-3 border-2 border-[#7773E1] text-[#7773E1] rounded-lg hover:bg-[#7773E1]/5 active:bg-[#7773E1]/10 transition-all duration-200 text-sm sm:text-base font-semibold font-sans flex items-center justify-center"
+              className="px-4 py-2 bg-[#7773E1] text-white rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-all duration-200"
             >
               Back
             </button>
           )}
-          <button
-            onClick={handleContinue}
-            disabled={isSubmitting}
-            className={`w-32 sm:w-40 h-12 px-4 sm:px-6 py-3 bg-[#7773E1] rounded-lg border-2 border-[#7773E1] text-white hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-all duration-200 text-sm sm:text-base font-semibold font-sans flex items-center justify-center ${
-              isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-            }`}
-          >
-            {isSubmitting ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            ) : (
-              currentScreen === 5 ? 'Submit' : 'Continue'
-            )}
-          </button>
+          {currentScreen < 5 ? (
+            <button
+              onClick={handleContinue}
+              className="px-4 py-2 bg-[#7773E1] text-white rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-all duration-200"
+            >
+              Continue
+            </button>
+          ) : (
+            <button
+              onClick={handleSubmit}
+              className="px-4 py-2 bg-[#7773E1] text-white rounded-lg hover:bg-[#7773E1]/90 active:bg-[#7773E1]/80 transition-all duration-200"
+            >
+              Submit
+            </button>
+          )}
         </div>
-      </div>
 
-      {/* Modal Overlays for Exit Confirmation and Success Message */}
-      {showExitConfirmation && <ExitConfirmationModal />}
-      {showSuccessMessage && <SuccessMessage />}
+        {/* Modal Overlays */}
+        {showExitConfirmation && <ExitConfirmationModal />}
+        {showSuccessMessage && <SuccessMessage />}
+      </div>
     </div>
   );
 };
