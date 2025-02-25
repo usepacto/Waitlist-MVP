@@ -48,8 +48,8 @@ const Context: React.FC = () => {
     // - items-center: Centers child elements vertically.
     // This container centers its children both horizontally and vertically.
     // ------------------------------------------------------------------
-    <section className="w-full flex justify-center items-center">
-      <div className="w-full h-auto px-6 md:px-16 lg:px-20 pt-[60px] md:pt-[120px] pb-[60px] md:pb-[120px] bg-[#fbfbfe] flex flex-col lg:flex-row lg:items-start lg:gap-20">
+    <section className="w-full flex justify-center items-center pt-[1px]">
+      <div className="w-full h-auto px-6 md:px-16 lg:px-20 py-[30px] md:py-[60px] bg-[#fbfbfe] flex flex-col lg:flex-row lg:items-start lg:gap-20">
         {/* Column 1 */}
         <div className="h-auto lg:h-auto justify-center lg:justify-start items-center lg:items-start gap-3 flex w-full lg:w-[40%]">
           <div className="text-[#303030] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-sans leading-snug text-center lg:text-left">

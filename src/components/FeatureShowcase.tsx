@@ -51,7 +51,7 @@ const FeatureShowcase: React.FC = () => {
           - items-center: Centers children horizontally.
           - gap-10: Sets a gap of 10 units between child elements.
       ---------------------------------------------------------------- */}
-      <div className="w-full h-auto min-h-[694px] px-6 md:px-16 2xl:px-20 pt-[40px] md:pt-[120px] pb-[120px] bg-[#fbfbfe] flex flex-col justify-end items-center gap-10 md:gap-20">
+      <div className="w-full h-auto min-h-[694px] px-6 md:px-16 2xl:px-20 pt-[20px] md:pt-[60px] pb-[120px] bg-[#fbfbfe] flex flex-col justify-end items-center gap-10 md:gap-20">
         
         {/* ----------------------------------------------------------------
             Header Text Block <div>:
