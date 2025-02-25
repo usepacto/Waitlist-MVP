@@ -182,11 +182,12 @@ export default function HeroSection({ onSurveyShow }: HeroSectionProps): React.R
                 Next.js Image Component for the Hero Image
             */}
             <Image
-              src="/HeroImage2.svg" // Mobile image
+              src="/HeroImage2.svg"
               alt="Hero Image for mobile"
-              width={370}
-              height={425}
+              width={740} // Doubled from 370 for higher resolution
+              height={850} // Doubled from 425 for higher resolution
               className="w-full h-auto rounded-xl block md:hidden"
+              quality={100} // Ensure highest quality
               priority
             />
             <Image
